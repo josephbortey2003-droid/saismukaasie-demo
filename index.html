@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Sai's Mɔka'Asie | Local Foods, Sowutuom · Order on WhatsApp</title>
+<meta name="description" content="Sai's Mɔka'Asie Local Foods, Sowutuom – Mensah Addo. Today's menu, Sunday fufu, freezer food bowls and bulk orders for events. Order on WhatsApp 056 039 1285. Open daily till 10 pm.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700;800&family=Pacifico&display=swap">
+<style>
+/* Lean "link-in-bio" order page (agreed with user Nov 23: chop-style business → small, cheap, phone-first).
+   Brand from THEIR signboard + menu: charcoal lettering, red flame, caramel brush strokes on cream, script "Food Menu". */
+:root {
+  --char: #2e2a28; --red: #d33a2c; --red-deep: #a8281d; --caramel: #a47b4b; --caramel-soft: #f1e3cf;
+  --cream: #fbf4ea; --paper: #fff; --mute: #6e625a; --line: #eadccb; --green: #2f9e5b;
+  --display: "Archivo Black", "Arial Black", sans-serif; --sans: "Archivo", "Segoe UI", system-ui, sans-serif; --script: "Pacifico", cursive;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--cream); color: var(--char); font: 400 16px/1.6 var(--sans); overflow-x: hidden; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 6px; }
+.demo { background: var(--char); color: #f1e3cf; font-size: 12.5px; text-align: center; padding: 7px 12px; }
+.page { max-width: 560px; margin: 0 auto; padding: 0 max(16px, env(safe-area-inset-left, 0px)) 120px max(16px, env(safe-area-inset-right, 0px)); position: relative; }
+/* caramel brush strokes like their printed menu */
+.brush { position: fixed; z-index: 0; pointer-events: none; opacity: .5; }
+.brush.t { top: -30px; right: -60px; width: 420px; transform: rotate(-8deg); }
+.brush.b { bottom: -40px; left: -80px; width: 460px; transform: rotate(6deg); }
+.page > * { position: relative; z-index: 1; }
+
+header { text-align: center; padding: 26px 0 8px; }
+header .logo { width: 270px; margin: 0 auto; }
+.open { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-weight: 700; font-size: 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; }
+.open i { width: 9px; height: 9px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(47,158,91,.2); }
+.open.closed i { background: var(--red); box-shadow: 0 0 0 4px rgba(211,58,44,.2); }
+
+.hero { position: relative; margin-top: 18px; border-radius: 28px; overflow: hidden; aspect-ratio: 4 / 4.4; background: #ddd; box-shadow: 0 24px 50px rgba(46,42,40,.22); }
+.hero img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; }
+.hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 45%, rgba(30,22,18,.85)); }
+.hero .cap { position: absolute; left: 22px; right: 22px; bottom: 20px; z-index: 2; color: #fff; }
+.hero .cap small { font: 800 12px/1 var(--sans); letter-spacing: .16em; text-transform: uppercase; color: #ffd9a8; }
+.hero .cap h1 { font: 400 clamp(30px, 8vw, 40px)/1.02 var(--display); margin: 8px 0 0; }
+.steam { position: absolute; z-index: 1; bottom: 42%; width: 70px; height: 160px; border-radius: 50%; background: radial-gradient(ellipse, rgba(255,255,255,.7), rgba(255,255,255,0) 65%); filter: blur(10px); animation: rise 6s ease-in infinite; opacity: 0; }
+.steam.s1 { left: 34%; } .steam.s2 { left: 50%; animation-delay: -2s; } .steam.s3 { left: 42%; animation-delay: -4s; }
+@keyframes rise { 0% { transform: translateY(40px) scale(.6); opacity: 0; } 30% { opacity: .9; } 100% { transform: translateY(-160px) scale(1.5); opacity: 0; } }
+
+.quick { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 8px; font: 800 15.5px/1 var(--sans); padding: 16px 18px; border-radius: 16px; border: 2px solid var(--char); background: var(--char); color: #fff; text-decoration: none; cursor: pointer; text-align: center; }
+.btn.red { background: var(--red); border-color: var(--red); }
+.btn.red:hover { background: var(--red-deep); border-color: var(--red-deep); }
+.btn.ghost { background: var(--paper); color: var(--char); }
+.btn svg { width: 20px; height: 20px; flex: none; }
+
+section { margin-top: 40px; }
+.script { font: 400 34px/1 var(--script); color: var(--caramel); margin: 0 0 4px; }
+h2 { font: 400 26px/1.1 var(--display); margin: 0 0 6px; }
+.sub { color: var(--mute); margin: 0 0 16px; font-size: 15px; }
+
+.days { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
+.days button { flex: none; font: 800 14px/1 var(--sans); padding: 11px 14px; border-radius: 999px; border: 1.5px solid var(--line); background: var(--paper); color: var(--char); cursor: pointer; }
+.days button[aria-selected="true"] { background: var(--char); border-color: var(--char); color: #fff; }
+.days button .today { display: block; font-size: 9.5px; letter-spacing: .1em; color: var(--red); margin-top: 3px; }
+.days button[aria-selected="true"] .today { color: #ffb4a8; }
+.list { background: var(--paper); border-radius: 22px; border: 1px solid var(--line); margin-top: 10px; overflow: hidden; }
+.dish { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-bottom: 1px dashed var(--line); font-weight: 600; }
+.dish:last-child { border-bottom: 0; }
+.dish button { flex: none; width: 40px; height: 40px; border-radius: 50%; border: 2px solid var(--red); background: var(--paper); color: var(--red); font: 800 20px/1 var(--sans); cursor: pointer; }
+.dish.on { background: #fff6f4; } .dish.on button { background: var(--red); color: #fff; }
+.ask { padding: 18px 16px; color: var(--mute); }
+.ask a { color: var(--red); font-weight: 700; }
+
+.pics { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; margin-top: 12px; }
+.pics img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 14px; }
+
+.cards { display: grid; gap: 12px; }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; padding: 18px; display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; }
+.card img { width: 96px; height: 96px; object-fit: cover; border-radius: 16px; }
+.card h3 { font: 400 19px/1.15 var(--display); margin: 0 0 4px; }
+.card p { margin: 0 0 10px; color: var(--mute); font-size: 14.5px; }
+.sizes { display: flex; gap: 8px; flex-wrap: wrap; }
+.sizes button, .card .mini { font: 800 13.5px/1 var(--sans); padding: 10px 12px; border-radius: 12px; border: 2px solid var(--caramel); background: var(--caramel-soft); color: var(--char); cursor: pointer; text-decoration: none; }
+.sizes button.on { background: var(--red); border-color: var(--red); color: #fff; }
+.note { font-size: 12.5px; color: var(--mute); margin: 8px 2px 0; }
+
+.vibe { position: relative; border-radius: 24px; overflow: hidden; }
+.vibe img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.vibe div { position: absolute; left: 0; right: 0; bottom: 0; padding: 18px; color: #fff; background: linear-gradient(180deg, transparent, rgba(30,22,18,.85)); }
+.vibe b { font: 400 22px/1.1 var(--display); display: block; }
+
+.quotes { display: grid; gap: 10px; }
+blockquote { margin: 0; background: var(--paper); border-left: 5px solid var(--red); border-radius: 14px; padding: 14px 16px; }
+blockquote p { margin: 0 0 6px; font-weight: 600; }
+blockquote cite { font-style: normal; font-size: 13px; color: var(--mute); }
+
+.info { background: var(--paper); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; }
+.info div { display: flex; justify-content: space-between; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--line); font-weight: 600; }
+.info div:last-child { border-bottom: 0; }
+.info small { color: var(--mute); text-align: right; font-weight: 500; }
+.map { margin-top: 12px; border-radius: 22px; overflow: hidden; aspect-ratio: 4 / 3; border: 1px solid var(--line); background: var(--caramel-soft); }
+.map iframe { width: 100%; height: 100%; border: 0; display: block; }
+footer { text-align: center; margin-top: 36px; color: var(--mute); font-size: 13.5px; }
+footer a { font-weight: 700; color: var(--char); }
+
+/* order bar + sheet */
+.bar { position: fixed; left: 50%; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); width: min(528px, calc(100% - 28px)); z-index: 30; display: flex; gap: 10px; align-items: center; background: var(--char); color: #fff; border-radius: 18px; padding: 10px 10px 10px 18px; box-shadow: 0 16px 36px rgba(46,42,40,.35); transition: transform .3s, opacity .3s; }
+.bar.hide { transform: translate(-50%, 140%); opacity: 0; pointer-events: none; }
+.bar span { flex: 1; font-weight: 700; font-size: 14.5px; }
+.bar .btn { padding: 13px 16px; }
+dialog.sheet { border: 0; border-radius: 24px; padding: 0; width: min(520px, calc(100% - 20px)); max-height: calc(100dvh - 24px); color: var(--char); }
+dialog.sheet::backdrop { background: rgba(30,22,18,.6); }
+.sheet form { padding: 22px; display: grid; gap: 12px; }
+.sheet h2 { margin: 0; }
+.sheet ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.sheet li { background: var(--caramel-soft); border-radius: 999px; padding: 6px 12px; font-weight: 700; font-size: 13.5px; }
+.sheet label { display: grid; gap: 5px; font-weight: 700; font-size: 14px; }
+.sheet input, .sheet select, .sheet textarea { font: 400 16px/1.4 var(--sans); padding: 12px 13px; border: 1.5px solid var(--line); border-radius: 12px; background: var(--cream); color: var(--char); width: 100%; }
+.seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.seg label { display: flex; align-items: center; justify-content: center; gap: 6px; border: 2px solid var(--line); border-radius: 12px; padding: 12px; cursor: pointer; }
+.seg input { width: auto; accent-color: var(--red); }
+.row { display: flex; gap: 10px; } .row .btn { flex: 1; }
+@media (min-width: 900px) { .brush { opacity: .7; } }
+@media (prefers-reduced-motion: reduce) { .steam { display: none; } html { scroll-behavior: auto; } }
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+
+<svg class="brush t" viewBox="0 0 400 120" aria-hidden="true"><path d="M10 70 C 60 20, 160 30, 220 40 S 360 20, 392 46 C 340 70, 260 64, 200 80 S 60 110, 10 70z" fill="#a47b4b" opacity=".55"/><path d="M40 82 C 120 60, 200 74, 300 62" stroke="#c9a77a" stroke-width="10" fill="none" stroke-linecap="round" opacity=".6"/></svg>
+<svg class="brush b" viewBox="0 0 400 120" aria-hidden="true"><path d="M8 60 C 80 30, 150 50, 230 38 S 370 30, 394 60 C 330 90, 250 84, 180 96 S 50 100, 8 60z" fill="#8a6235" opacity=".5"/></svg>
+
+<div class="demo">Demo order page made for Sai's Mɔka'Asie. Final details to be confirmed by you.</div>
+
+<div class="page">
+  <header>
+    <img class="logo" src="img/logo.svg" alt="Sai's Mɔka'Asie Local Foods" width="290" height="92">
+    <div><span class="open" id="openNow"><i></i><span id="openText">Open today</span></span></div>
+  </header>
+
+  <div class="hero">
+    <img src="img/fufu.webp" alt="Fufu in groundnut soup with goat meat in a clay pot" width="1125" height="1500">
+    <span class="steam s1" aria-hidden="true"></span><span class="steam s2" aria-hidden="true"></span><span class="steam s3" aria-hidden="true"></span>
+    <div class="cap"><small>Sowutuom · Mensah Addo</small><h1>Authentic Ghanaian food, cooked with love.</h1></div>
+  </div>
+
+  <div class="quick">
+    <a class="btn red" href="#menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Today's menu</a>
+    <a class="btn ghost" href="tel:+233560391285"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg>Call us</a>
+  </div>
+
+  <section id="menu">
+    <p class="script">Food Menu</p>
+    <h2>What's cooking</h2>
+    <p class="sub">Tap <b>+</b> on what you want, then send your order on WhatsApp. Pick up, eat in, or get it delivered.</p>
+    <div class="days" role="tablist" aria-label="Day of the week" id="days"></div>
+    <div class="list" id="list"></div>
+    <div class="pics">
+      <img src="img/ampesi.webp" alt="Ampesi with stew" loading="lazy">
+      <img src="img/basket.webp" alt="Food basket with fish, egg and gari" loading="lazy">
+      <img src="img/friedrice.webp" alt="Beef fried rice with vegetables" loading="lazy">
+    </div>
+  </section>
+
+  <section id="more">
+    <p class="script">Order ahead</p>
+    <h2>Freezer bowls &amp; events</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/fufu.webp" alt="Ghanaian stew ready to freeze" loading="lazy" style="object-position:50% 65%">
+        <div><h3>Freezer food bowls</h3><p>Proper Ghanaian stews and soups for your freezer. Heat and eat after a long day.</p>
+          <div class="sizes" id="bowls"><button type="button" data-item="Freezer bowl 3 litres (GH₵450)">3 L · GH₵450</button><button type="button" data-item="Freezer bowl 6 litres (GH₵750)">6 L · GH₵750</button></div></div>
+      </div>
+      <div class="card">
+        <img src="img/basket.webp" alt="Food basket" loading="lazy">
+        <div><h3>Bulk orders &amp; food baskets</h3><p>Small gatherings to big events, funerals, birthdays, office lunch. Order ahead and we'll handle the food.</p>
+          <div class="sizes"><button type="button" id="bulkBtn">Ask about an event</button></div></div>
+      </div>
+    </div>
+    <p class="note">Bowl prices as posted on our Instagram. We confirm the final price when you order.</p>
+  </section>
+
+  <section>
+    <div class="vibe"><img src="img/inside.webp" alt="Inside Sai's Mɔka'Asie: wooden walls, hanging plants and warm lights" loading="lazy"><div><b>Homey vibes, real local food.</b>Come and eat in, every day till 10 pm.</div></div>
+  </section>
+
+  <section>
+    <p class="script">Customers say</p>
+    <div class="quotes">
+      <blockquote><p>"Finger licking goodness… the lady knows her way with her hands. BRAVO!"</p><cite>Yaw T-B. · Google review ★★★★★</cite></blockquote>
+      <blockquote><p>"Food was delicious and the service was good, and they gave me hand cream after ❤️"</p><cite>Google visitor update</cite></blockquote>
+      <blockquote><p>"Wonderful Ghanaian local meals."</p><cite>Alhassan I. · Google review</cite></blockquote>
+    </div>
+  </section>
+
+  <section id="visit">
+    <p class="script">Find us</p>
+    <h2>Sowutuom – Mensah Addo</h2>
+    <p class="sub">On the Kwashieman–Ofankor road. Also on Bolt Food.</p>
+    <div class="info">
+      <div>Every day <small>8:30 am – 10 pm</small></div>
+      <div>Tuesday <small>9 am – 10 pm</small></div>
+      <div>Orders &amp; WhatsApp <small>056 039 1285</small></div>
+      <div>Bulk orders <small>055 003 8175</small></div>
+    </div>
+    <div class="map"><iframe title="Map to Sai's Mɔka'Asie" src="https://www.google.com/maps?q=Sai%E2%80%99s+Muka%E2%80%99Asie,+Accra&ll=5.6180311,-0.2766356&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </section>
+
+  <footer>Follow <a href="https://www.instagram.com/muka_asie/" target="_blank" rel="noopener">@muka_asie</a> on Instagram · 4.2 ★ on Google</footer>
+</div>
+
+<div class="bar hide" id="bar"><span id="barText">Nothing added yet</span><button class="btn red" type="button" id="orderBtn">Order on WhatsApp</button></div>
+
+<dialog class="sheet" id="sheet" aria-labelledby="sheetTitle">
+  <form method="dialog" id="orderForm">
+    <h2 id="sheetTitle">Your order</h2>
+    <ul id="picked"></ul>
+    <div class="seg" role="radiogroup" aria-label="How do you want it">
+      <label><input type="radio" name="how" value="Pick up" checked> Pick up</label>
+      <label><input type="radio" name="how" value="Delivery"> Delivery</label>
+    </div>
+    <label>Your name<input name="name" autocomplete="name" required></label>
+    <label id="addrWrap" hidden>Delivery location<input name="addr" placeholder="e.g. Pentecost University, Sowutuom"></label>
+    <label>When?<select name="when"><option>As soon as possible</option><option>Lunch time</option><option>Evening</option><option>Another day (I'll say below)</option></select></label>
+    <label>Anything else? (optional)<textarea name="note" rows="2" placeholder="Extra pepper, number of people, event date…"></textarea></label>
+    <div class="row"><button type="button" class="btn ghost" id="closeSheet">Back</button><button type="submit" class="btn red">Send on WhatsApp</button></div>
+  </form>
+</dialog>
+
+<script>
+(() => {
+  const WA = '233560391285';
+  const MENU = {
+    Mon: ['Plain rice & palava sauce / goat', 'Angwamo', 'Ampesi & abom (yam/plantain)', 'Kɔkɔɔ 3tor', 'Omotuo & groundnut soup', 'Garden egg stew & yam/plantain', 'Anadwo waakye'],
+    Tue: null,
+    Wed: ['Plain rice & palava sauce', 'Angwamo', 'Ampesi & abom (yam/plantain)', 'Kɔkɔɔ 3tor', 'Local chicken soup & fufu', 'Indomie / noodles', 'Anadwo waakye', 'Plain rice & kotodwe stew'],
+    Thu: ['Plain rice & goat stew', 'Angwamo', 'Ampesi & abom (yam/plantain)', 'Kɔkɔɔ 3tor', 'Banku & okro', 'Anadwo waakye'],
+    Fri: null,
+    Sat: ['Beef fried rice', 'Assorted noodles'],
+    Sun: ['Fufu & goat light soup', 'Fufu & chicken light soup', 'Fufu & tilapia', 'Fufu & palmnut soup', 'Fufu & groundnut soup', 'Etor & ripe plantain', 'Banku & okro soup', 'Banku & groundnut soup', 'Konkonte & groundnut soup', 'Omotuo & groundnut soup', 'Jollof & chicken', 'Angwamo', 'Rice & palava sauce', 'Ampesi & abom', 'Ampesi & palava sauce']
+  };
+  const names = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  const now = new Date(), today = names[now.getUTCDay()];
+  const picked = new Set();
+  const days = document.getElementById('days'), list = document.getElementById('list');
+  const order = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  const show = d => {
+    days.querySelectorAll('button').forEach(b => b.setAttribute('aria-selected', b.dataset.d === d));
+    list.innerHTML = '';
+    if (!MENU[d]) { list.innerHTML = '<div class="ask">' + d + "'s menu changes. <a href=\"https://wa.me/" + WA + '?text=' + encodeURIComponent("Hello Sai's Mɔka'Asie! What's on the menu today?") + '" target="_blank" rel="noopener">Ask us on WhatsApp</a> or call 056 039 1285.</div>'; return; }
+    MENU[d].forEach(item => {
+      const row = document.createElement('div'); row.className = 'dish' + (picked.has(item) ? ' on' : '');
+      row.innerHTML = '<span></span><button type="button"></button>';
+      row.querySelector('span').textContent = item;
+      const b = row.querySelector('button'); b.textContent = picked.has(item) ? '✓' : '+'; b.setAttribute('aria-label', 'Add ' + item);
+      b.onclick = () => { toggle(item); row.classList.toggle('on', picked.has(item)); b.textContent = picked.has(item) ? '✓' : '+'; };
+      list.appendChild(row);
+    });
+  };
+  order.forEach(d => { const b = document.createElement('button'); b.type = 'button'; b.setAttribute('role', 'tab'); b.dataset.d = d; b.innerHTML = d + (d === today ? '<span class="today">TODAY</span>' : ''); b.onclick = () => show(d); days.appendChild(b); });
+  show(today);
+
+  const barText = document.getElementById('barText');
+  const toggle = item => { picked.has(item) ? picked.delete(item) : picked.add(item); barText.textContent = picked.size ? picked.size + (picked.size === 1 ? ' item' : ' items') + ' added' : 'Nothing added yet'; document.getElementById('bar').classList.toggle('hide', !picked.size); };
+  document.querySelectorAll('#bowls button').forEach(b => b.onclick = () => { toggle(b.dataset.item); b.classList.toggle('on', picked.has(b.dataset.item)); });
+
+  const sheet = document.getElementById('sheet'), f = document.getElementById('orderForm'), pl = document.getElementById('picked');
+  const open = () => { pl.innerHTML = ''; (picked.size ? [...picked] : ['No dishes picked — tell us below']).forEach(p => { const li = document.createElement('li'); li.textContent = p; pl.appendChild(li); }); sheet.showModal(); };
+  document.getElementById('orderBtn').onclick = open;
+  document.getElementById('closeSheet').onclick = () => sheet.close();
+  document.getElementById('bulkBtn').onclick = () => { f.note.value = 'Bulk order for an event: date ___, number of people ___'; open(); };
+  f.querySelectorAll('input[name=how]').forEach(r => r.onchange = () => { document.getElementById('addrWrap').hidden = f.how.value !== 'Delivery'; });
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    let msg = "Hello Sai's Mɔka'Asie! I'd like to order:\n" + (picked.size ? [...picked].map(p => '- ' + p).join('\n') : '(see note)');
+    msg += '\n\nName: ' + f.name.value + '\n' + f.how.value + (f.how.value === 'Delivery' && f.addr.value ? ' to: ' + f.addr.value : '') + '\nWhen: ' + f.when.value;
+    if (f.note.value) msg += '\nNote: ' + f.note.value;
+    msg += '\n\nThank you!';
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+
+  const m = now.getUTCHours() * 60 + now.getUTCMinutes(), start = today === 'Tue' ? 540 : 510, end = 1320;
+  const on = document.getElementById('openNow'), ot = document.getElementById('openText');
+  if (m >= start && m < end) ot.textContent = 'Open now · till 10 pm';
+  else { on.classList.add('closed'); ot.textContent = m < start ? 'Opens today at ' + (today === 'Tue' ? '9 am' : '8:30 am') : 'Closed now · opens 8:30 am'; }
+})();
+</script>
+
+</body>
+</html>
